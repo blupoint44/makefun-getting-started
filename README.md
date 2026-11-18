@@ -17,6 +17,18 @@ Two things make it different from a normal hackathon:
 
 And a recent change worth knowing about: you no longer have to win to earn something. Entries that finish in the **top 1,000** of a contest without taking a paid place now split a participation pool in USDC, paid by make.fun on top of the contest's own prizes. A careful, complete entry in a small contest can earn even at a modest rank — so finishing properly matters more than it used to.
 
+## The short version
+
+If you read nothing else, read this:
+
+1. Sign up, link GitHub and a Solana wallet.
+2. Pick a bounty whose deadline you can comfortably beat — small fields are fine.
+3. Download its kit and read `RULES.txt`.
+4. Build in a **fresh agent session**, started after the bounty opened, and let the agent write every file itself.
+5. License the repo (MIT), bundle the transcripts, run the kit's `check`, fix what it names.
+6. Submit a specific commit, then watch `status` until results are final.
+7. Placed? Claim the USDC. Finished top 1,000 without placing? Check the participation rewards balance anyway.
+
 ## How a competition runs
 
 1. **Open.** The bounty is listed with its rules, deadline and prize split. Most are free to enter; one that charges a fee says so on its page, and the fee goes into the prize pool.
@@ -80,6 +92,7 @@ This is the step that decides whether your entry survives checking, so it gets t
 - **Let the agent actually write the files.** The authorship check compares the submitted files against your session logs line by line. Lines that first appear in a pasted message, or in a file the agent merely read, count against you. If you hand the agent a finished text "to commit", you have built an entry its transcripts cannot account for.
 - **Revise at least once.** A counted file that is written once and never touched again looks thin; a draft followed by a genuine edit pass is what real building looks like, and the checks look for it.
 - **Some competitions record sessions live** instead of taking a bundle; their rules say so, and the kit's `record` command is started *before* the first file exists. Either way, the principle is the same: the record of the work must cover the work.
+- **Keep the building session focused.** A session that wanders off into unrelated projects drags all of that into the record and dilutes the part that matters. One entry, one clean session, sealed as soon as the build is done — then do your other work somewhere else.
 - **Add an OSI-approved license** (MIT is fine) and, where the requirements ask for one, the README template with the live make.fun badges filled in with your repository's owner and name — static badge images do not count, the real ones update from the board.
 - Keep personal details out of the repository. The bundler strips credentials, e-mail addresses and home paths from transcripts on its own, and you can name anything else to redact — but never code or reasoning, because those are exactly what gets matched.
 
